@@ -10,7 +10,7 @@ set -g status-fg white
 set-window-option -g window-status-current-bg red
 
 set -g status-left-length 70
-set -g status-left "#[fg=green] #h #[fg=white]: #[fg=blue]#(ifconfig | grep --after 1 enp0 | grep 'inet ' | awk '{print $2}' | awk -F':' '{print \"lan \" $2}') #[fg=red]#(ifconfig tun0 | grep 'inet ' | awk '{print $2}' | awk -F':' '{print \"vpn \" $2}')"
+set -g status-left "#[fg=green] #h #[fg=white]: #[fg=blue]#(ifconfig eno1 | grep 'inet ' | awk '{print $2}' | awk -F':' '{print \"lan \" $2}') #[fg=red]#(ifconfig docker0 | grep 'inet ' | awk '{print $2}' | awk -F':' '{print \"docker \" $2}') "
 
 set -g status-right-length 60
 set -g status-right "#[fg=blue]#S #I:#P #[fg=yellow]:: %d %b %Y #[fg=green]:: %l:%M %p"
