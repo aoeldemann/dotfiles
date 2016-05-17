@@ -14,4 +14,5 @@ alias gd='git diff'
 alias ga='git add'
 alias gc='git commit'
 
+alias d='docker'
 alias v='vagrant'
