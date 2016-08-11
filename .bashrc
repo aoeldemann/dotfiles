@@ -19,3 +19,8 @@ alias d='docker'
 alias v='vagrant'
 alias vs='vagrant ssh'
 alias vu='vagrant up'
+
+alias dol='doctl compute droplet list'
+alias doc='doctl compute droplet create'
+alias dod='doctl compute droplet delete'
+alias dos='doctl compute ssh'
