@@ -27,3 +27,5 @@ alias dol='doctl compute droplet list'
 alias doc='doctl compute droplet create'
 alias dod='doctl compute droplet delete'
 alias dos='doctl compute ssh --ssh-key-path ~/.ssh/andreas --ssh-user andreas --ssh-port 4747'
+
+alias ubuntu='docker run -it --rm -v `pwd`:/data ubuntu /bin/bash'
