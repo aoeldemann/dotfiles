@@ -1,13 +1,16 @@
-docker_ps1() {
-  if [ -z $dockerenv ]; then
-    echo ''
+if [[ ! $TERM =~ screen ]]; then
+  tmux has-session -t default &> /dev/null
+  if [ $? == 0 ]; then
+    if [ `tmux list-clients -t default | wc -l` == 0 ]; then
+      tmux attach -t default
+    fi
+    exit
   else
-    echo '(docker) '
+    exec tmux new-session -s default
   fi
-  return 0
-}
+fi
 
-PS1='\[\033[0;34m\]\u\[\033[0m\]@\[\033[0;31m\]\h\[\033[0m\]:\w \[\033[0;36m\]$(docker_ps1)\[\033[0m\]$ '
+PS1='\[\033[0;34m\]\u\[\033[0m\]@\[\033[0;31m\]\h\[\033[0m\]:\w $ '
 
 alias gs='git status'
 alias gd='git diff'
