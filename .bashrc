@@ -1,15 +1,3 @@
-if [[ ! $TERM =~ screen ]]; then
-  tmux has-session -t default &> /dev/null
-  if [ $? == 0 ]; then
-    if [ `tmux list-clients -t default | wc -l` == 0 ]; then
-      tmux attach -t default
-    fi
-    exit
-  else
-    exec tmux new-session -s default
-  fi
-fi
-
 PS1='\[\033[0;34m\]\u\[\033[0m\]@\[\033[0;31m\]\h\[\033[0m\]:\w $ '
 
 alias gs='git status'

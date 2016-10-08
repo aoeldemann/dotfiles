@@ -1,3 +1,4 @@
 alias ls='ls -G'
 alias ll='ls -al'
+. ~/repos/dotfiles/.bashrc.tmux
 . ~/repos/dotfiles/.bashrc
