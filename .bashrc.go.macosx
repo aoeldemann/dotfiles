@@ -1,0 +1,1 @@
+alias go='docker run --rm -v `pwd`:/usr/src/myapp -w /usr/src/myapp -e GOOS=darwin -e GOARCH=amd64 golang:latest'
