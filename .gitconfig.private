@@ -1,0 +1,15 @@
+[user]
+	email = aoeldemann@gmail.com
+	name = Andreas Oeldemann
+	signingkey = D0AAFF00
+[push]
+	default = simple
+
+[core]
+	editor = vim
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	program = gpg2
