@@ -1,0 +1,9 @@
+[user]
+	email = aoeldemann@gmail.com
+	name = Andreas Oeldemann
+
+[push]
+	default = simple
+
+[core]
+	editor = vim
