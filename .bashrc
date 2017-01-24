@@ -13,5 +13,7 @@ alias vu='vagrant up'
 
 alias ubuntu='docker run -it --rm -v `pwd`:/data ubuntu /bin/bash'
 
+alias gpg='gpg2'
+
 export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
 export PATH=$PATH:$HOME/bin
