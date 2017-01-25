@@ -11,7 +11,7 @@ alias v='vagrant'
 alias vs='vagrant ssh'
 alias vu='vagrant up'
 
-alias ubuntu='docker run -it --rm -v `pwd`:/data ubuntu /bin/bash'
+alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
 
 alias gpg='gpg2'
 
