@@ -7,9 +7,8 @@ alias gc='git commit'
 alias gp='git push'
 
 alias d='docker'
+
 alias v='vagrant'
-alias vs='vagrant ssh'
-alias vu='vagrant up'
 
 alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
 
