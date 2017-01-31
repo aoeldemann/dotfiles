@@ -10,6 +10,9 @@ alias d='docker'
 
 alias v='vagrant'
 
+alias tl='tmux list-session'
+alias ta='tmux attach'
+
 alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
 
 alias gpg='gpg2'
