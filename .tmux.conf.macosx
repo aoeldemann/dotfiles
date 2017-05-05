@@ -16,8 +16,3 @@ set -g status-right-length 60
 set -g status-right "#[fg=blue]#S #I:#P #[fg=yellow]:: %d %b %Y #[fg=green]:: %l:%M %p"
 
 set -g default-command "reattach-to-user-namespace -l /bin/bash"
-
-unbind C-b-left
-unbind C-b-right
-unbind C-b-up
-unbind C-b-down
