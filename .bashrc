@@ -17,7 +17,12 @@ alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
 
 alias gpg='gpg2'
 
-export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
+# set SSH_AUTH_SOCK to gpg agent only if we are not connected via ssh
+# otherwise use standard ssh agent. this enables ssh agent forwarding
+if [ -z "$SSH_CLIENT" ]; then
+  export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
+fi
+
 export PATH=$PATH:$HOME/bin
 
 export GOPATH=~/dev/go
