@@ -32,9 +32,6 @@ au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
 " set color scheme
 colorscheme lucario
 
-" enable auto-completion
-set omnifunc=syntaxcomplete#Complete
-
 " do not delete indents
 inoremap <CR> <CR>x<BS>
 
