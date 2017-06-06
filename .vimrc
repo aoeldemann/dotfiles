@@ -32,6 +32,10 @@ set omnifunc=syntaxcomplete#Complete
 " do not delete indents
 inoremap <CR> <CR>x<BS>
 
+" set indent line character and color
+let g:indentLine_color_term = 223
+let g:indentLine_char = '┆'
+
 " python indents with 4 whitespaces
 au FileType python set expandtab softtabstop=4 shiftwidth=4 autoindent
 
