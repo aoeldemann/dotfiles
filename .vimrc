@@ -26,6 +26,9 @@ au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
 " set color scheme
 colorscheme lucario
 
+" enable auto-completion
+set omnifunc=syntaxcomplete#Complete
+
 " python indents with 4 whitespaces
 au FileType python set expandtab softtabstop=4 shiftwidth=4 autoindent
 
