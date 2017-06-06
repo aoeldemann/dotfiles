@@ -53,3 +53,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
 " NERDTree: toggle shortcut
 let mapleader = "."
 map <Leader>. :NERDTreeToggle<CR>
+
+" enable backspacing in insert mode
+set backspace+=indent,eol,start
