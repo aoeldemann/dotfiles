@@ -41,3 +41,15 @@ inoremap <CR> <CR>x<BS>
 " set indent line character and color
 let g:indentLine_color_term = 223
 let g:indentLine_char = '┆'
+
+" NERDTree: open if no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" NERDTree: exit if NERDTree is last open window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+  \ && b:NERDTree.isTabTree()) | q | endif
+
+" NERDTree: toggle shortcut
+let mapleader = "."
+map <Leader>. :NERDTreeToggle<CR>
