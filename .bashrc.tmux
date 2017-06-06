@@ -1,4 +1,5 @@
 if [[ ! $TERM =~ screen ]]; then
+  export TERM=screen-256color
   tmux has-session -t default &> /dev/null
   if [ $? == 0 ]; then
     if [ `tmux list-clients -t default | wc -l` == 0 ]; then
@@ -6,7 +7,6 @@ if [[ ! $TERM =~ screen ]]; then
     fi
     exit
   else
-    export TERM=screen-256color
     exec tmux new-session -s default
   fi
 fi
