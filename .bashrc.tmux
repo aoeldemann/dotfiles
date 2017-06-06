@@ -6,6 +6,7 @@ if [[ ! $TERM =~ screen ]]; then
     fi
     exit
   else
+    export TERM=screen-256color
     exec tmux new-session -s default
   fi
 fi
