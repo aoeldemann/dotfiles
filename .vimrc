@@ -29,6 +29,9 @@ colorscheme lucario
 " enable auto-completion
 set omnifunc=syntaxcomplete#Complete
 
+" do not delete indents
+inoremap <CR> <CR>x<BS>
+
 " python indents with 4 whitespaces
 au FileType python set expandtab softtabstop=4 shiftwidth=4 autoindent
 
