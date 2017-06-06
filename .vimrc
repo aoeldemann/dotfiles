@@ -1,6 +1,12 @@
+" load pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 " configure indenting
-set expandtab softtabstop=2 shiftwidth=2 autoindent
+set expandtab softtabstop=2 shiftwidth=2
 filetype plugin indent on
+au FileType python set expandtab softtabstop=4 shiftwidth=4
+au FileType go set noexpandtab tabstop=4 shiftwidth=4
 
 " enable syntax highlighting
 syntax on
@@ -35,7 +41,3 @@ inoremap <CR> <CR>x<BS>
 " set indent line character and color
 let g:indentLine_color_term = 223
 let g:indentLine_char = '┆'
-
-" python indents with 4 whitespaces
-au FileType python set expandtab softtabstop=4 shiftwidth=4 autoindent
-
