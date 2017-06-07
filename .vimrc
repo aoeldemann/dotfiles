@@ -7,6 +7,7 @@ set expandtab softtabstop=2 shiftwidth=2
 filetype plugin indent on
 au FileType python set expandtab softtabstop=4 shiftwidth=4
 au FileType go set noexpandtab tabstop=4 shiftwidth=4
+au FileType make set noexpandtab
 
 " enable syntax highlighting
 syntax on
