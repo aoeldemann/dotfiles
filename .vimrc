@@ -35,7 +35,7 @@ colorscheme lucario
 " do not delete indents
 inoremap <CR> <CR>x<BS>
 
-" set indent line character and color
+" indentLine: set color and character
 let g:indentLine_color_term = 223
 let g:indentLine_char = '┆'
 
