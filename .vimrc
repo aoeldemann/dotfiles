@@ -7,6 +7,7 @@ set expandtab softtabstop=2 shiftwidth=2
 filetype plugin indent on
 au FileType python set expandtab softtabstop=4 shiftwidth=4
 au FileType go set noexpandtab tabstop=4 shiftwidth=4
+au FileType make set noexpandtab
 
 " enable syntax highlighting
 syntax on
@@ -35,7 +36,7 @@ colorscheme lucario
 " do not delete indents
 inoremap <CR> <CR>x<BS>
 
-" set indent line character and color
+" indentLine: set color and character
 let g:indentLine_color_term = 223
 let g:indentLine_char = '┆'
 

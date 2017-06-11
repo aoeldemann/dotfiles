@@ -1,0 +1,8 @@
+[user]
+	email = andreas.oeldemann@tum.de
+	name = Andreas Oeldemann
+[push]
+	default = simple
+
+[core]
+	editor = vim
