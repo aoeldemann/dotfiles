@@ -25,6 +25,6 @@ if [ -z "$SSH_CLIENT" ]; then
   export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
 fi
 
-export PATH=$PATH:$HOME/bin
-
 export GOPATH=~/dev/go
+
+export PATH=$PATH:$HOME/bin:$GOPATH/bin
