@@ -54,3 +54,6 @@ map <Leader>. :NERDTreeToggle<CR>
 
 " enable backspacing in insert mode
 set backspace+=indent,eol,start
+
+" change json filetype to javascript for better syntax highlighting
+au BufNewFile,BufRead *.json set ft=javascript
