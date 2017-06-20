@@ -57,3 +57,10 @@ set backspace+=indent,eol,start
 
 " change json filetype to javascript for better syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
+
+" setup clang-format
+function! ClangFormatOnSave()
+  let l:formatdiff = 1
+  py3f ~/repos/dotfiles/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.c call ClangFormatOnSave()
