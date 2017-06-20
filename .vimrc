@@ -60,7 +60,10 @@ au BufNewFile,BufRead *.json set ft=javascript
 
 " setup clang-format
 function! ClangFormatOnSave()
-  let l:formatdiff = 1
-  py3f ~/repos/dotfiles/clang-format.py
+  if has('python3')
+    py3f ~/repos/dotfiles/clang-format.py
+  else
+    pyf ~/repos/dotfiles/clang-format.py
+  endif
 endfunction
 autocmd BufWritePre *.h,*.c call ClangFormatOnSave()
