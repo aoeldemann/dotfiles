@@ -14,3 +14,7 @@ gpg-connect-agent updatestartuptty /bye > /dev/null
 
 # load aws cli bash completer
 .  /usr/local/etc/bash_completion.d/aws_bash_completer
+
+# load gcloud cli bash completer
+. ~/bin/google-cloud-sdk/completion.bash.inc
+. ~/bin/google-cloud-sdk/path.bash.inc
