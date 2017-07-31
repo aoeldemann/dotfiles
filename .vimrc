@@ -31,8 +31,7 @@ set colorcolumn=80
 au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " set color scheme
-let base16colorspace=256
-colorscheme base16-ocean
+colorscheme lucario
 
 " do not delete indents
 inoremap <CR> <CR>x<BS>

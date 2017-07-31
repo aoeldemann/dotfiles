@@ -19,9 +19,6 @@ alias gpg='gpg2'
 
 alias now='date +%y%m%d%H%M'
 
-# load base16-ocean color scheme
-. ~/repos/dotfiles/macos/base16-ocean.sh
-
 # set SSH_AUTH_SOCK to gpg agent only if we are not connected via ssh
 # otherwise use standard ssh agent. this enables ssh agent forwarding
 if [ -z "$SSH_CLIENT" ]; then
