@@ -14,6 +14,3 @@ gpg-connect-agent updatestartuptty /bye > /dev/null
 
 # load aws cli bash completer
 .  /usr/local/etc/bash_completion.d/aws_bash_completer
-
-# load base16-ocean color scheme
-. ~/repos/dotfiles/macos/base16-ocean.sh
