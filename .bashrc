@@ -18,6 +18,7 @@ alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
 alias gpg='gpg2'
 
 alias now='date +%y%m%d%H%M'
+alias day='date +%y%m%d'
 
 # set SSH_AUTH_SOCK to gpg agent only if we are not connected via ssh
 # otherwise use standard ssh agent. this enables ssh agent forwarding
