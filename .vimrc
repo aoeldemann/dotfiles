@@ -18,8 +18,8 @@ set number
 " enable cursor line
 set cursorline
 
-" show trailing whitespaces and hard tabs
-set list listchars=tab:»·,trail:·
+" show trailing whitespaces
+set list listchars=trail:·
 
 " remove trailing whitespaces when files are saved
 autocmd BufWritePre * %s/\s\+$//e
