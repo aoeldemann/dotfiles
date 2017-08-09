@@ -58,6 +58,9 @@ set backspace+=indent,eol,start
 " change json filetype to javascript for better syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
+" enable syntax highlighting for Vagrantfile
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
+
 " setup clang-format
 function! ClangFormatOnSave()
   if has('python3')
