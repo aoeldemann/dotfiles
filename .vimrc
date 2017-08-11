@@ -19,7 +19,7 @@ set number
 set cursorline
 
 " show trailing whitespaces
-set list listchars=trail:·
+set list listchars=tab:»·,trail:·
 
 " remove trailing whitespaces when files are saved
 autocmd BufWritePre * %s/\s\+$//e
