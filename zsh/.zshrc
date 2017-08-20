@@ -20,4 +20,8 @@ export PATH=$PATH:$HOME/bin:$GOPATH/bin
 
 # setup gpg
 export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye > /dev/null
+
+# mac specific gpg setup
+if [ $(uname) = "Darwin" ]; then
+  gpg-connect-agent updatestartuptty /bye > /dev/null
+fi
