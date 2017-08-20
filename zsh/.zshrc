@@ -5,6 +5,9 @@ plugins=(git osx)
 source $ZSH/oh-my-zsh.sh
 setopt globdots
 
+# set language
+export LANG=en_US.UTF-8
+
 # source aliases
 source ~/repos/dotfiles/zsh/aliases
 
