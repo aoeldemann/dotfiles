@@ -1,0 +1,17 @@
+# git aliases
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+
+# docker aliases
+alias d='docker'
+alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
+alias gcloud='docker run --rm -it --volumes-from gcloud-config google/cloud-sdk:alpine gcloud'
+
+# time aliases
+alias now='date +%y%m%d%H%M'
+alias day='date +%y%m%d'
+
+alias ll='ls -alh'
