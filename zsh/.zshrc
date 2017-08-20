@@ -1,6 +1,7 @@
 # configure zsh
 export ZSH=~/.oh-my-zsh
-ZSH_THEME="bira"
+export ZSH_CUSTOM=~/repos/dotfiles/zsh/custom
+ZSH_THEME="aoel"
 plugins=(git osx)
 source $ZSH/oh-my-zsh.sh
 setopt globdots
