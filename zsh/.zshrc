@@ -3,6 +3,11 @@ export ZSH=~/.oh-my-zsh
 export ZSH_CUSTOM=~/repos/dotfiles/zsh/custom
 ZSH_THEME="aoel"
 plugins=(git osx)
+if [ -f ~/repos/dotfiles/zsh/.promptcolor ]; then
+  source ~/repos/dotfiles/zsh/.promptcolor
+else
+  unset promptcolor
+fi
 source $ZSH/oh-my-zsh.sh
 setopt globdots
 
