@@ -18,17 +18,10 @@ set number
 " enable cursor line
 set cursorline
 
-" show invisible characters (tabs and trailing whitespaces)
-function! ShowInvisibles()
-  " golang uses tabs (formatter adds them automatically). showing all these
-  " would be annoying -> show only trailing whitespaces for golang
-  if &ft =~ 'go'
-    set list listchars=tab:\ \ ,trail:·
-  else
-    set list listchars=tab:»·,trail:·
-  endif
-endfunction
-autocmd BufNewFile,BufRead * call ShowInvisibles()
+" highlight invisible characters (tabs and trailing whitespaces). golang uses
+" tabs (formatter adds them automatically). showing all these would be annoying
+" -> deactivate for goland
+autocmd BufEnter * if index(['go'], &ft) < 0 | SpaceHi
 
 " remove trailing whitespaces when files are saved
 autocmd BufWritePre * %s/\s\+$//e
@@ -56,7 +49,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " NERDTree: exit if NERDTree is last open window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree")
   \ && b:NERDTree.isTabTree()) | q | endif
 
 " NERDTree: toggle shortcut
