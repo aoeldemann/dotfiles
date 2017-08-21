@@ -5,9 +5,9 @@ execute pathogen#infect()
 " configure indenting
 set expandtab softtabstop=2 shiftwidth=2
 filetype plugin indent on
-au FileType python set expandtab softtabstop=4 shiftwidth=4
-au FileType go set noexpandtab tabstop=4 shiftwidth=4
-au FileType make set noexpandtab
+autocmd FileType python set expandtab softtabstop=4 shiftwidth=4
+autocmd FileType go set noexpandtab tabstop=4 shiftwidth=4
+autocmd FileType make set noexpandtab
 
 " enable syntax highlighting
 syntax on
@@ -18,8 +18,17 @@ set number
 " enable cursor line
 set cursorline
 
-" show trailing whitespaces
-set list listchars=tab:»·,trail:·
+" show invisible characters (tabs and trailing whitespaces)
+function! ShowInvisibles()
+  " golang uses tabs (formatter adds them automatically). showing all these
+  " would be annoying -> show only trailing whitespaces for golang
+  if &ft =~ 'go'
+    set list listchars=tab:\ \ ,trail:·
+  else
+    set list listchars=tab:»·,trail:·
+  endif
+endfunction
+autocmd BufNewFile,BufRead * call ShowInvisibles()
 
 " remove trailing whitespaces when files are saved
 autocmd BufWritePre * %s/\s\+$//e
@@ -28,7 +37,7 @@ autocmd BufWritePre * %s/\s\+$//e
 set colorcolumn=80
 
 " highlight lines exceeding 80 char print margin
-au BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
+autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " set color scheme
 set t_Co=256
@@ -58,10 +67,10 @@ map <Leader>. :NERDTreeToggle<CR>
 set backspace+=indent,eol,start
 
 " change json filetype to javascript for better syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " enable syntax highlighting for Vagrantfile
-au BufNewFile,BufRead Vagrantfile set filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 
 " setup clang-format
 function! ClangFormatOnSave()
