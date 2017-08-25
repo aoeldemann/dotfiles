@@ -73,4 +73,4 @@ function! ClangFormatOnSave()
     pyf ~/repos/dotfiles/clang-format.py
   endif
 endfunction
-autocmd BufWritePre *.h,*.c call ClangFormatOnSave()
+autocmd BufWritePre *.h,*.c,*.cpp call ClangFormatOnSave()
