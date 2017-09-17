@@ -14,3 +14,5 @@ alias gs='gst'
 if [ $(uname) = "Linux" ]; then
   alias gpg='gpg2'
 fi
+
+alias ssh_gpg='ssh -R /home/aoel/.gnupg/S.gpg-agent:$HOME/.gnupg/S.gpg-agent'
