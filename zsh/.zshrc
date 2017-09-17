@@ -34,3 +34,8 @@ export GPG_TTY=$(tty)
 if [ $(uname) = "Darwin" ]; then
   gpg-connect-agent updatestartuptty /bye > /dev/null
 fi
+
+# if an additional, custom zshrc file exists, source it
+if [ -f ~/.zshrc.custom ]; then
+  source ~/.zshrc.custom
+fi
