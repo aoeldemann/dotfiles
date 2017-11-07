@@ -51,7 +51,7 @@ function push {
     echo "ERROR: no push message specified!"
     return
   fi
-  if [[ ! -v PUSHOVER_TOKEN || ! -v PUSHOVER_USER ]]; then
+  if (( ! ${+PUSHOVER_TOKEN} || ! ${+PUSHOVER_USER} )); then
     echo "ERROR: pushover.net auth keys not set (~/.pushover)!"
     return
   fi
