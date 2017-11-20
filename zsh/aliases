@@ -3,6 +3,9 @@ alias d='docker'
 alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
 alias gcloud='docker run --rm -it --volumes-from gcloud-config google/cloud-sdk:alpine gcloud'
 
+# vagrant
+alias v='vagrant'
+
 # time aliases
 alias now='date +%y%m%d%H%M'
 alias day='date +%y%m%d'
