@@ -23,7 +23,7 @@ export GOPATH=~/dev/go
 export PATH=$PATH:$HOME/bin:$GOPATH/bin
 
 # setup gpg
-if [ -S ~/.gnupg/S.gpg-agent.ssh ]; then
+if [[ (-z "$SSH_CLIENT") && (-S ~/.gnupg/S.gpg-agent.ssh) ]]; then
   export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
 fi
 export GPG_TTY=$(tty)
