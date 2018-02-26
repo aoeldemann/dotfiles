@@ -74,3 +74,9 @@ function! ClangFormatOnSave()
   endif
 endfunction
 autocmd BufWritePre *.h,*.c,*.cpp call ClangFormatOnSave()
+
+" disable tex conceal feature
+let g:tex_conceal = ""
+
+" configure tex text width
+autocmd FileType tex set textwidth=80
