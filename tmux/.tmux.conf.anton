@@ -1,6 +1,4 @@
-set-option -g prefix C-b
-unbind C-b
-bind-key C-a last-window
+new-session
 bind | split-window -h
 bind - split-window -v
 
