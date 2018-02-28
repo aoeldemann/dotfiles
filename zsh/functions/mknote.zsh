@@ -1,12 +1,13 @@
 # Creates a new markdown meeting note.
 function mknote() {
   # ask for meeting information
-  vared -p 'Meeting Title: ' -c title
-  vared -p 'Meeting Participants: ' -c participants
+  vared -p "Meeting Title: " -c meeting_title
+  vared -p "Meeting Participants: " -c meeting_participants
+  vared -p "Meeting Location: " -c meeting_location
 
   # for the filename, convert meeting title to lower case and replace
   # whitespaces by dashes
-  filename=${title:l}
+  filename=${meeting_title:l}
   filename=${filename// /-}
 
   # prepend date and append file extension
@@ -20,14 +21,23 @@ function mknote() {
 
   # create file and insert initial content
   cat << EOF > $filename
-# ${title}
+# ${meeting_title}
 * Date: `date "+%b %d %Y"`
-* Participants: ${participants}
+* Participants: ${meeting_participants}
+* Location: ${meeting_location}
 
 ## Notes
 
+
+## Next Steps
+
 EOF
 
-  # open the file with cursor positioned in last line
-  vim $filename +
+  # unset variables
+  unset meeting_title
+  unset meeting_participants
+  unset meeting_location
+
+  # open the file with cursor positioned in first note line
+  vim $filename +7
 }
