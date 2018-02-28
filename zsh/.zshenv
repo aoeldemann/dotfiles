@@ -12,8 +12,15 @@ function markdown {
     echo "ERROR: invalid input file extension!"
     return
   fi
+
   grip $1 --export ${1:r}.html
-  firefox ${1:r}.html
-  sleep 1
+
+  if [[ `uname` == "Darwin" ]]; then
+    open ${1:r}.html
+  else
+    firefox ${1:r}.html
+  fi
+
+  sleep 0.5
   rm ${1:r}.html
 }
