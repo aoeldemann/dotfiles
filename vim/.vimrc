@@ -34,8 +34,7 @@ autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " set color scheme
 set t_Co=256
-set background=dark
-colorscheme espresso
+colorscheme janah
 
 " do not delete indents
 inoremap <CR> <CR>x<BS>
@@ -80,3 +79,6 @@ let g:tex_conceal = ""
 
 " configure tex text width
 autocmd FileType tex set textwidth=80
+
+" reduce updatetime to 100 ms to show gitgutter indicators faster
+set updatetime=100
