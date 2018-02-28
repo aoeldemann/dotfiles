@@ -81,8 +81,11 @@ autocmd BufWritePre *.h,*.c,*.cpp call ClangFormatOnSave()
 " disable tex conceal feature
 let g:tex_conceal = ""
 
-" configure tex text width
-autocmd FileType tex set textwidth=80
+" enable spell checking for markdown and tex files
+autocmd FileType markdown,tex set spell
+
+" configure text width for markdown and tex files
+autocmd FileType markdown,tex set textwidth=80
 
 " reduce updatetime to 100 ms to show gitgutter indicators faster
 set updatetime=100
