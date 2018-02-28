@@ -18,6 +18,9 @@ set number
 " enable cursor line
 set cursorline
 
+" set zsh as shell
+set shell=/usr/bin/zsh
+
 " highlight invisible characters (tabs and trailing whitespaces). golang uses
 " tabs (formatter adds them automatically). showing all these would be annoying
 " -> deactivate for goland
