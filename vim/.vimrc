@@ -86,3 +86,9 @@ autocmd FileType tex set textwidth=80
 
 " reduce updatetime to 100 ms to show gitgutter indicators faster
 set updatetime=100
+
+" disable markdown folding
+let g:vim_markdown_folding_disabled = 1
+
+" markdown preview shortcut
+map <F12> :!markdown %<CR>
