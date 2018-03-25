@@ -33,7 +33,7 @@ autocmd BufWritePre * %s/\s\+$//e
 set colorcolumn=80
 
 " highlight lines exceeding 80 char print margin
-autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
+" autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " set color scheme
 set t_Co=256
