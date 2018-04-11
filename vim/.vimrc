@@ -98,6 +98,3 @@ map <F12> :!markdown %<CR>
 
 " NERD Commenter: whitespace after delimiter
 let g:NERDSpaceDelims = 1
-
-" shortcut to block format current paragraph
-map <A-q> vipgq<CR>
