@@ -1,7 +1,6 @@
 # docker aliases
 alias d='docker'
 alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
-alias gcloud='docker run --rm -it --volumes-from gcloud-config google/cloud-sdk:alpine gcloud'
 
 # vagrant
 alias v='vagrant'
@@ -17,5 +16,3 @@ alias gs='gst'
 if [ $(uname) = "Linux" ]; then
   alias gpg='gpg2'
 fi
-
-alias ssh_gpg='ssh -R /home/aoel/.gnupg/S.gpg-agent:$HOME/.gnupg/S.gpg-agent'
