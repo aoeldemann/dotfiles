@@ -19,13 +19,6 @@ export LC_ALL=en_US.UTF-8
 export GOPATH=~/dev/go
 export PATH=$PATH:$HOME/bin:$GOPATH/bin
 
-# use gpg as ssh agent (if not connected to this machine via ssh)
-if [[ (-z "$SSH_CLIENT") && (-S ~/.gnupg/S.gpg-agent.ssh) ]]; then
-  export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
-fi
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye > /dev/null
-
 # if an additional, custom zshrc file exists, source it
 if [ -f ~/.zshrc.custom ]; then
   source ~/.zshrc.custom
@@ -33,6 +26,11 @@ fi
 
 # source aliases
 source ~/repos/dotfiles/zsh/aliases
+
+# source configs
+for config in ~/repos/dotfiles/zsh/configs/*.zsh; do
+  source $config
+done
 
 # source functions
 for func in ~/repos/dotfiles/zsh/functions/*.zsh; do

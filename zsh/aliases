@@ -12,7 +12,3 @@ alias day='date +%y%m%d'
 alias ll='ls -alh'
 alias tmux='tmux -2'
 alias gs='gst'
-
-if [ $(uname) = "Linux" ]; then
-  alias gpg='gpg2'
-fi
