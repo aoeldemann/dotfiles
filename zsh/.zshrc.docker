@@ -1,0 +1,7 @@
+export ZSH=~/.oh-my-zsh
+export ZSH_CUSTOM=~/repos/dotfiles/zsh/custom
+ZSH_THEME="aoel"
+plugins=(git)
+promptcolor=magenta
+source $ZSH/oh-my-zsh.sh
+setopt globdots
