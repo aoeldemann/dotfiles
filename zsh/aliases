@@ -1,5 +1,6 @@
 # docker aliases
 alias d='docker'
+alias drm='docker rm $(docker ps -a -q)'
 alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
 
 # vagrant
