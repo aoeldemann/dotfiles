@@ -6,8 +6,12 @@ else
   fi
 fi
 
-PROMPT='%{$fg[$promptcolor]%}%M%{$reset_color%} :: $(git_prompt_info)%~ %b»%b '
-RPROMPT='[%*]'
+local cmdline='%{$fg[$promptcolor]%}%m%{$reset_color%} %~ $(git_prompt_info)'
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+
+PROMPT="%{$fg[$promptcolor]%}╭─%{$reset_color%}${cmdline}
+%{$fg[$promptcolor]%}╰─▶%{$reset_color%} "
+RPS1="%B${return_code}%b"
 
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
