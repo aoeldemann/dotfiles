@@ -6,7 +6,7 @@ else
   fi
 fi
 
-local cmdline='%{$fg[$promptcolor]%}%m%{$reset_color%} %~ $(git_prompt_info)'
+local cmdline='%{$fg[$promptcolor]%}%M%{$reset_color%} %~ $(git_prompt_info)'
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 PROMPT="%{$fg[$promptcolor]%}╭─%{$reset_color%}${cmdline}
