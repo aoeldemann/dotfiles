@@ -1,8 +1,6 @@
 # docker aliases
 alias d='docker'
 alias drm='docker rm $(docker ps -a -q)'
-alias drmi='docker images | grep -v "IMAGE ID" | awk "{print $3}" | xargs -L1 docker rmi'
-alias dup='docker images | grep -v REPOSITORY | awk "{print $1}" | xargs -L1 docker pull'
 alias ubuntu='docker run -it --rm -v `pwd`:/data aoeldemann/ubuntu /bin/bash'
 
 # vagrant
