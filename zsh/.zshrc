@@ -1,9 +1,8 @@
 # configure oh-my-zsh path
 export ZSH=~/.oh-my-zsh
 
-# set up powerlevel9k theme
-POWERLEVEL9K_MODE='nerdfont-complete'
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# leave theme empty. will configure pure theme later
+ZSH_THEME=""
 
 # set up general stuff ...
 plugins=(git osx jump systemd)
