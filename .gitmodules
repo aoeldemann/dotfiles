@@ -34,3 +34,6 @@
 [submodule "vim/.vim/bundle/vim-snazzy"]
 	path = vim/.vim/bundle/vim-snazzy
 	url = https://github.com/connorholyday/vim-snazzy.git
+[submodule "zsh/plugins/pure"]
+	path = zsh/plugins/pure
+	url = https://github.com/aoeldemann/pure.git
