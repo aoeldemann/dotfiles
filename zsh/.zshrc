@@ -33,3 +33,6 @@ done
 for func in ~/repos/dotfiles/zsh/functions/*.zsh; do
   source $func
 done
+
+# enable syntax highlighting plugin
+source ~/repos/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
