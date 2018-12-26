@@ -34,3 +34,6 @@
 [submodule "zsh/zsh-syntax-highlighting"]
 	path = zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "vim/.vim/bundle/vim-snazzy"]
+	path = vim/.vim/bundle/vim-snazzy
+	url = https://github.com/connorholyday/vim-snazzy.git

@@ -36,9 +36,7 @@ set colorcolumn=80
 " autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " set color scheme
-set t_Co=256
-colorscheme janah
-set background=dark
+colorscheme snazzy
 
 " do not delete indents
 inoremap <CR> <CR>x<BS>
