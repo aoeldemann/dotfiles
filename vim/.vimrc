@@ -35,7 +35,8 @@ set colorcolumn=80
 " highlight lines exceeding 80 char print margin
 " autocmd BufWinEnter * call matchadd('ErrorMsg', '\%>80v.\+', -1)
 
-" set color scheme
+" set color scheme and enable transparent background
+let g:SnazzyTransparent = 1
 colorscheme snazzy
 
 " do not delete indents
