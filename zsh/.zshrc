@@ -8,7 +8,6 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # set up general stuff ...
 plugins=(git osx jump systemd)
 source $ZSH/oh-my-zsh.sh
-setopt globdots
 
 # set language
 export LANG=en_US.UTF-8
