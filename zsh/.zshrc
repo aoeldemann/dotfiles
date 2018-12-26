@@ -1,13 +1,12 @@
-# configure oh-my-zsh paths, theme, plugins, prompt color...
+# configure oh-my-zsh path
 export ZSH=~/.oh-my-zsh
-export ZSH_CUSTOM=~/repos/dotfiles/zsh/custom
-ZSH_THEME="aoel"
+
+# set up powerlevel9k theme
+POWERLEVEL9K_MODE='nerdfont-complete'
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# set up general stuff ...
 plugins=(git osx jump systemd)
-if [ -f ~/repos/dotfiles/zsh/.promptcolor ]; then
-  source ~/repos/dotfiles/zsh/.promptcolor
-else
-  unset promptcolor
-fi
 source $ZSH/oh-my-zsh.sh
 setopt globdots
 
