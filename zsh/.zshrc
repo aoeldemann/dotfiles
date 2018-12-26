@@ -35,4 +35,4 @@ for func in ~/repos/dotfiles/zsh/functions/*.zsh; do
 done
 
 # enable syntax highlighting plugin
-source ~/repos/dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/repos/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
