@@ -97,3 +97,5 @@ map <F12> :!markdown %<CR>
 
 " NERD Commenter: whitespace after delimiter
 let g:NERDSpaceDelims = 1
+
+let g:go_version_warning = 0
