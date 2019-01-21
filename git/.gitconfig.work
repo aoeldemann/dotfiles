@@ -1,12 +1,16 @@
 [user]
-	email = andreas.oeldemann@tum.de
-	name = Andreas Oeldemann
-	signingkey = D0AAFF00
+  email = andreas.oeldemann@tum.de
+  name = Andreas Oeldemann
+  signingkey = D0AAFF00
+
 [push]
-	default = simple
+  default = simple
 
 [core]
-	editor = vim
+  editor = vim
 
 [commit]
-	gpgsign = true
+  gpgsign = true
+
+[gpg]
+  program = gpg2

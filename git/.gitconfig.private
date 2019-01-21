@@ -1,12 +1,13 @@
 [user]
-	email = hey@aoel.io
-	name = Andreas Oeldemann
-	signingkey = D0AAFF00
+  email = hey@aoel.io
+  name = Andreas Oeldemann
+  signingkey = D0AAFF00
+
 [push]
-	default = simple
+  default = simple
 
 [core]
-	editor = vim
+  editor = vim
 
 [commit]
-	gpgsign = true
+  gpgsign = true

@@ -98,4 +98,5 @@ map <F12> :!markdown %<CR>
 " NERD Commenter: whitespace after delimiter
 let g:NERDSpaceDelims = 1
 
+" Ignore vim-go version warning
 let g:go_version_warning = 0

@@ -1,9 +1,9 @@
 [user]
-	email = hey@aoel.io
-	name = Andreas Oeldemann
+  email = hey@aoel.io
+  name = Andreas Oeldemann
 
 [push]
-	default = simple
+  default = simple
 
 [core]
-	editor = vim
+  editor = vim
