@@ -12,9 +12,13 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# export some paths
+# set up golang
 export GOPATH=~/dev/go
 export PATH=$PATH:$HOME/bin:$GOPATH/bin
+
+# set up ruby
+export GEM_HOME=~/.gem/ruby/2.3.0/gems
+export PATH=$PATH:~/.gem/ruby/2.3.0/bin
 
 # if an additional, custom zshrc file exists, source it
 if [ -f ~/.zshrc.custom ]; then
