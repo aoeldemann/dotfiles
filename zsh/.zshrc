@@ -16,10 +16,6 @@ export LC_ALL=en_US.UTF-8
 export GOPATH=~/dev/go
 export PATH=$PATH:$HOME/bin:$GOPATH/bin
 
-# set up ruby
-export GEM_HOME=~/.gem/ruby/2.3.0/gems
-export PATH=$PATH:~/.gem/ruby/2.3.0/bin
-
 # if an additional, custom zshrc file exists, source it
 if [ -f ~/.zshrc.custom ]; then
   source ~/.zshrc.custom
