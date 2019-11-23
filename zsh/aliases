@@ -10,6 +10,9 @@ alias v='vagrant'
 alias now='date +%y%m%d%H%M'
 alias day='date +%y%m%d'
 
+# ssh
+alias sshp='ssh -o "UserKnownHostsFile /dev/null"'
+
 # other stuff
 alias ll='ls -alh'
 alias tmux='tmux -2'
