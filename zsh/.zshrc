@@ -1,28 +1,19 @@
-# configure oh-my-zsh path
-export ZSH=~/.oh-my-zsh
-
-# leave theme empty. will configure pure theme later
-ZSH_THEME=""
-
-# set up general stuff ...
-plugins=(git osx jump systemd)
-source $ZSH/oh-my-zsh.sh
-
 # set language
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# set up golang
-export GOPATH=~/dev/go
-export PATH=$PATH:$HOME/bin:$GOPATH/bin
+# configure oh-my-zsh path
+export ZSH=~/.oh-my-zsh
 
-# if an additional, custom zshrc file exists, source it
-if [ -f ~/.zshrc.custom ]; then
-  source ~/.zshrc.custom
-fi
+# leave oh-my-zsh theme empty. will configure pure theme later
+ZSH_THEME=""
 
-# source aliases
-source ~/repos/dotfiles/zsh/aliases
+# load oh-my-zsh
+plugins=(git osx jump systemd)
+source $ZSH/oh-my-zsh.sh
+
+# add ~/bin to path
+export PATH=$PATH:~/bin
 
 # source configs
 for config in ~/repos/dotfiles/zsh/configs/*.zsh; do
@@ -34,5 +25,8 @@ for func in ~/repos/dotfiles/zsh/functions/*.zsh; do
   source $func
 done
 
-# enable syntax highlighting plugin
-source ~/repos/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source fzf config (if present)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# source custom config (if present)
+[ -f ~/.zshrc.custom ] && source ~/.zshrc.custom
