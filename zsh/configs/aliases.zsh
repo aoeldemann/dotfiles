@@ -16,3 +16,4 @@ alias sshp='ssh -o "UserKnownHostsFile /dev/null" -o "StrictHostKeyChecking no"'
 # other stuff
 alias ll='ls -alh'
 alias tmux='tmux -2'
+alias mm='~/dev/projects/maskedmail/maskedmail.py alias'
