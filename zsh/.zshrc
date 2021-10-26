@@ -15,6 +15,9 @@ source $ZSH/oh-my-zsh.sh
 # add ~/bin to path
 export PATH=$PATH:~/bin
 
+# source custom config (if present)
+[ -f ~/.zshrc.custom ] && source ~/.zshrc.custom
+
 # source configs
 for config in ~/repos/dotfiles/zsh/configs/*.zsh; do
   source $config
@@ -27,6 +30,3 @@ done
 
 # source fzf config (if present)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# source custom config (if present)
-[ -f ~/.zshrc.custom ] && source ~/.zshrc.custom
