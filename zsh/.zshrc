@@ -9,7 +9,7 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME=""
 
 # load oh-my-zsh
-plugins=(git osx jump systemd)
+plugins=(git macos jump systemd)
 source $ZSH/oh-my-zsh.sh
 
 # add ~/bin to path
