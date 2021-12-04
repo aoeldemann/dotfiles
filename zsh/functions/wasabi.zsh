@@ -9,7 +9,7 @@ function wasabi {
     return
   fi
 
-  source ~/awscli/bin/activate
+  source ~/dev/venvs/awscli/bin/activate
 
   AUTHFILE=$HOME/.aws/credentials.asc
 
