@@ -13,7 +13,11 @@ alias day='date +%y%m%d'
 # ssh
 alias sshp='ssh -o "UserKnownHostsFile /dev/null" -o "StrictHostKeyChecking no"'
 
+# bat
+if (( $+commands[bat] )) then
+  alias cat='bat --paging=never'
+fi
+
 # other stuff
 alias ll='ls -alh'
 alias tmux='tmux -2'
-alias mm='~/dev/projects/maskedmail/maskedmail.py alias'
